@@ -25,6 +25,7 @@ describe('student', function(){
 					if(err) throw err;
 					res.should.have.status(200);
 					res.body.should.be.an.instanceOf(Object);
+
 					done();
 				});
 				
@@ -40,6 +41,7 @@ describe('student', function(){
 					if(err) throw err;
 					res.should.have.status(200);
 					res.body.should.be.an.instanceOf(Object);
+					res.body.should.have.property('studNo').with.lenghtOf(10);
 					done();
 				});
 				
